@@ -1,10 +1,12 @@
+/*
+Write a program sort an array that contains only 0’s & 1’s
+For eg: {1,0,1,1,1,0,0,0,1,0,0,1,1}
+Ans: {0,0,0,0,0,0,1,1,1,1,1,1,1}
+*/
 package com.company.Assignment2;
 
 import java.util.Arrays;
-
-
-
-public class Assignment2_Question6 {
+public class Assignment2_Question11 {
     public static void main(String[] args) {
         int[] a = {0,1,1,0,0,1,0} ;
         countsorting(a);
