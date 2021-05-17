@@ -9,56 +9,35 @@ import java.util.Scanner;
 
 public class xyz {
 
-    static void subsetSums(int arr[], int n)
-    {
-
-        // There are totoal 2^n subsets
-        int total = 1 << n;
-
-        // Consider all numbers from 0 to 2^n - 1
-        for(int i = 0; i < total; i++)
-        {
-            System.out.print(i+" ");
-            int sum = 0;
-
-            // Consider binary reprsentation of
-            // current i to decide which elements
-            // to pick.
-            for(int j = 0; j < n; j++) {
-                System.out.print(j+" ");
-                if ((i & (1 << j)) != 0)
-                    sum += arr[j];
-            }
-
-            // Print sum of picked elements.
-            System.out.print("sum"+sum + " ");
-        }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter string");
+        String str = sc.nextLine();
+        System.out.println(toggleCase(str));
     }
 
-    // Driver code
-    public static void main(String args[])
-    {
-   /*     int arr[] = new int[]{ 5, 4, 3 };
-        int n = arr.length;
+    public static String toggleCase(String str){
+        StringBuilder sb = new StringBuilder(str);
+        str ="";
+        for (int i = 0; i < sb.length(); i++) {
 
-        subsetSums(arr, n);*/
-        int n=5;
-        int row =0;
-        while(row < n-1){
-            int col=0;
-            while(col < n-1){
-                if(col <= row){
-                    System.out.print("* ");
-                }
-                else{
-                    System.out.print("  ");
-                }
-                col++;
+            char c = sb.charAt(i);
+            int n =(int)c ;
+            if(n > 96){
+                n = n-32;
+                c = (char)n;
+                str = str + c;
+            } else {
+
+                n = n + 32;
+                c = (char)n;
+                str = str + c;
+
             }
-            System.out.println(
 
-            );
-            row++;
+
         }
+        return str;
+
     }
 }

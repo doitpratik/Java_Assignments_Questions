@@ -10,11 +10,10 @@ public class Assignment3_Question11 {
         int size = str2.length;
         for (int i = 0; i < size; i++) {
             if(str2[i]>=65 && str2[i] <= 90){
-                int c = (str2[i]-65);
-                str2[i] = (char)(97+c);
+
+                str2[i] = (char)(str2[i]+32);
             }else if(str2[i]>=97 && str2[i] <= 122){
-                int c = (str2[i]-97);
-                str2[i] = (char)(65+c);
+                str2[i] = (char)(str2[i]-32);
             }
         }
         String str3 = String.valueOf(str2);
