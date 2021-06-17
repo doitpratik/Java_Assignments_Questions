@@ -10,7 +10,7 @@ package com.company.Assignment4;
 
 public class Assignment4_Question10 {
     public static void main(String[] args) {
-        String str = "AxA";
+        String str = "AxAxAx";
         char[] arr = str.toCharArray();
         int start =0, end = start+2, count = 0;
         System.out.println(twins_Not(arr,start,end,count));
@@ -22,6 +22,6 @@ public class Assignment4_Question10 {
         }else if(arr[start] == arr[end]){
             count++;
         }
-        return twins_Not(arr, start+1,start+3,count);
+        return twins_Not(arr, start+1,end+1,count);
     }
 }
