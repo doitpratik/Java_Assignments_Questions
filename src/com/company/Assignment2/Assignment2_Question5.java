@@ -6,7 +6,7 @@ public class Assignment2_Question5 {
     public static void main(String[] args) {
         int num;
         Scanner sc = new Scanner(System.in);
-        num = sc.nextInt();
+        num = 25134;
         int index = Integer.toString(num).length();
         int result = 0, total_count = index;
         while(num != 0){
@@ -16,6 +16,6 @@ public class Assignment2_Question5 {
             num /= 10;
         }
         System.out.println("Reverse No.: "+result);
-
+        System.out.println(273516/100);
     }
 }

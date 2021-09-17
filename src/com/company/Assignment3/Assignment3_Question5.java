@@ -19,7 +19,7 @@ public class Assignment3_Question5 {
     }
 
     private static void spiralform_clockwise(int[][] arring, int row_start, int row_end, int col_start, int col_end) {
-        if(row_start >= row_end || col_start >=col_end) return;
+        if(row_start > row_end || col_start >  col_end) return;
         //this is first cols printing, after above base  condtion has became false
         for (int i = col_start; i <= col_end ; i++) {
             System.out.print(arring[row_start][i]+" ");
